@@ -6,7 +6,7 @@ import (
 )
 
 func Connect() *gorm.DB {
-	dsn := "host=localhost user=root password=root dbname=go-api port=9920 sslmode=disable TimeZone=Asia/Shanghai"
+	dsn := "host=localhost user=postgres password=postgres dbname=go_api port=5432 sslmode=disable TimeZone=Asia/Shanghai"
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic(err)
